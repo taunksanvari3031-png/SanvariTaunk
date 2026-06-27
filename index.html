@@ -223,30 +223,168 @@
             margin-top: 40px;
         }
     skills-grid { grid-template-columns: repeat(2, 1fr); }
-}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
 @media (max-width: 768px) {
-  .hamburger { display: flex; }
-  .nav-links {
-    position: absolute; top: 70px; right: 0;
-    background: #1e293b; flex-direction: column;
-    width: 100%; padding: 20px 0; gap: 15px;
-    text-align: center;
-    transform: translateY(-150%);
-    transition: transform 0.4s ease;
-  }
-  .nav-links.active { transform: translateY(0); }
 
-  .hero { min-height: 80vh; text-align: center; }
-  .hero-content { width: 100%; }
-  .hero-content h1 { font-size: 2rem; }
-  .roles { justify-content: center; }
-  .hero-content p { margin: 0 auto 20px; }
+    /* Header */
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
 
-  section { padding: 50px 5%; }
-  h2 { font-size: 1.5rem; }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
 
-  .courses-grid { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    nav li {
+        margin: 10px;
+    }
+
+    nav li a {
+        font-size: 16px;
+    }
+
+    /* About Section */
+    .about {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about h1 {
+        margin-left: 0;
+        font-size: 35px;
+    }
+
+    .about .tags {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .about .tags button {
+        margin: 8px;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .about p {
+        width: 90%;
+        margin: 20px auto;
+        font-size: 18px;
+    }
+
+    .about .imagesection {
+        position: static;
+        margin-bottom: 30px;
+    }
+
+    .about .imagesection img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .intro .icons {
+        justify-content: center;
+    }
+
+    /* Skills */
+    .skills {
+        padding: 50px 20px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Journey */
+    .journey {
+        padding: 50px 20px;
+    }
+
+    .timeline-item {
+        margin-left: 15px;
+        padding: 20px;
+    }
+
+    /* Courses */
+    .courses {
+        padding: 50px 20px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact {
+        padding: 50px 20px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Titles */
+    .section-title {
+        font-size: 35px;
+    }
+}
+
+
+/* Extra Small Devices */
+
+@media (max-width: 480px) {
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about .imagesection img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .intro p,
+    .about p,
+    .timeline-item p,
+    .course-card p {
+        font-size: 16px;
+    }
 }
 
     </style>
@@ -401,4 +539,3 @@
 
 </body>
 </html>
-
